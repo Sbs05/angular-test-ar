@@ -1,0 +1,65 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.835265000000, 10.59469200000, 43],
+          [35.8346000000, 10.593445000000, 43]
+        ]
+      },
+      "properties": {
+        "Bezeichnung": "500005",
+        "Id": "0940EFDB-AC31-4100-BDDC-F0FAB91E8874",
+        "ObjectType": 10000,
+        "S0L_L_LAYERNAME": "BA_ABWHALTUNG_KM_LINIE",
+        "S0L_L_LINEWIDTH": 0.2,
+        "GID": "866D3217-8042-4B76-B0DC-C07270013E18",
+        "Identifier": "HALTUNG",
+        "PARTITION": "P7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.83342000000, 10.594018000000, 43],
+          [35.834049000000, 10.591848000000, 43]
+        ]
+      },
+      "properties": {
+        "Bezeichnung": "500004",
+        "Id": "FD3D4E52-5FA7-436A-95EF-8C5BB9B229EB",
+        "ObjectType": 10000,
+        "S0L_L_LAYERNAME": "BA_ABWHALTUNG_KM_LINIE",
+        "S0L_L_LINEWIDTH": 0.2,
+        "GID": "1FD5DEE9-F8FB-495D-A028-6FAA6FB4D010",
+        "Identifier": "HALTUNG",
+        "PARTITION": "P7"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [35.83474000000, 10.5915020000000, 43],
+          [35.833560000000, 10.59041000000, 43]
+        ]
+      },
+      "properties": {
+        "Bezeichnung": "500003",
+        "Id": "263EAB6E-5E86-4264-928E-4FC7B797F076",
+        "ObjectType": 10000,
+        "S0L_L_LAYERNAME": "BA_ABWHALTUNG_KM_LINIE",
+        "S0L_L_LINEWIDTH": 0.2,
+        "GID": "539635F1-FC90-4FD7-9248-D63BC901E779",
+        "Identifier": "HALTUNG",
+        "PARTITION": "P7"
+      }
+    }
+  ]
+}

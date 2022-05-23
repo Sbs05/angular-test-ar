@@ -1,0 +1,56 @@
+#distance {
+  position: fixed;
+  z-index: 10000;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 70px;
+  left: 5%;
+  width: 300px;
+  display: block;
+}
+
+#message {
+  position: fixed;
+  z-index: 10;
+  left: 5%;
+  bottom: 30px;
+  width: 300px;
+  padding: 5%;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(49, 196, 190, 0.75);
+  border-radius: 20px;
+  border: 3px solid #fff;
+  display: none;
+}
+
+// ************************
+#positionOut, #recenterOut, #recenter, #recenterSmart {
+  background-color: black;
+  position: absolute;
+  padding: 1vmax;
+  color:white;
+  z-index: 50;
+  font-family: sans-serif;
+}
+#positionOut {
+  top: 2vmax;
+  left: 2vmax;
+}
+#recenterOut {
+  top: 2vmax;
+  right: 2vmax;
+  display: none;
+}
+#recenter {
+  bottom: 2vmax;
+  right: 2vmax;
+  pointer-events: auto;
+}
+#recenterSmart {
+  bottom: 2vmax;
+  left: 2vmax;
+  pointer-events: auto;
+}

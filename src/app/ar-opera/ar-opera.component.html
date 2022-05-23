@@ -1,0 +1,34 @@
+<div *ngIf="isPopupVisible" fxLayout="column" fxLayoutGap="15px" class="model">
+  <span class="title ellipsisSpan"> {{viewModel.Designation}}</span>
+  <span class="textSpan"
+    >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque maxime fuga aspernatur totam et quasi
+    voluptatibus, amet consequatur minima natus inventore rem error suscipit saepe perferendis sapiente ad tenetur
+    aliquid.</span
+  >
+  <button class="xClose" (click)="isPopupVisible = false">X</button>
+</div>
+
+<!-- <ar-scene>
+  <ar-geopose id="GT" lla=" 35.86668 10.57112 50"> 
+  </ar-geopose>
+</ar-scene> -->
+
+<a-scene
+  cursor="rayOrigin: mouse; fuseTimeout: 0"
+  vr-mode-ui="enabled: false"
+  arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;"
+  relative-position
+  arc
+>
+  <a-camera id="camera" user-height="50" gps-position compass-rotation> </a-camera>
+  <!-- <a-camera id="camera" gps-projected-camera rotation-reader user-height="50" gps-position compass-rotation> </a-camera> -->
+  <a-assets id="assets">
+    
+    <!-- <a-asset-item id="fence_50_31_0040507_9_asset" src="assets/fence_50_31_0040507_9.dae"></a-asset-item>
+    <a-asset-item id="fence_50_31_0040507_6_asset" src="assets/fence_50_31_0040507_6.dae"></a-asset-item>
+    <a-asset-item id="fence_50_31_0040507_16_asset" src="assets/fence_50_31_0040507_16.dae"></a-asset-item> -->
+    <a-asset-item id="manhole" src="assets/manhole/scene.gltf"></a-asset-item>
+
+   
+  </a-assets>
+</a-scene>

@@ -1,0 +1,49 @@
+.model {
+    z-index: 10;
+    // margin: 20px;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    padding: 30px 20px;
+    border-radius: 13px;
+    color: #d9e1f2;
+    background: linear-gradient(to right, #243342, #362d53);
+    box-shadow: rgba(64, 72, 191, 0.3) 0px 7px 29px 0px;
+    position: absolute;
+    overflow: hidden;
+    height: 50%;
+  }
+  
+  .xClose {
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    border-radius: 30px;
+    color: #d9e1f2;
+    font-size: 18px;
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 24px;
+    font-family: 'Fira Sans Medium', sans-serif;
+    color: #d9e1f2;
+  }
+  
+  .textSpan {
+    font-size: 14px;
+    font-family: 'Fira Sans Light', sans-serif;
+    color: #d9e1f2;
+  }
+  
+  .ellipsisSpan {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }

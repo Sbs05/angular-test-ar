@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>TrainingBouAugmentedReality</title>
+    <base href="/" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1" /> -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script>THREEx.ArToolkitContext.baseURL = 'https://jeromeetienne.github.io/AR.js/three.js/'</script>
+    <script src="https://cdn.rawgit.com/oscarmarinmiro/aframe-stereo-com‌​ponent/6db3472a/dist‌​/aframe-stereo-compo‌​nent.min.js"></script>
+    <script src="https://rawgit.com/argonjs/argon/develop/dist/argon.js"></script>
+    <script src="https://rawgit.com/argonjs/argon-aframe/master/dist/argon-aframe.js"></script>
+    <!-- <script src="https://threejs.org/build/three.js"></script> -->
+
+    <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://cdn.rawgit.com/chrisveness/latlon-geohash/53c3d474/latlon-geohash.js"></script>
+    <script>
+      var hash_fences = {};
+
+      function ce(t, a) {
+        var f = document.createElement(t);
+        for (var k in a) f.setAttribute(k, a[k]);
+        return f;
+      }
+
+      function load_hash(d) {
+        hash_fences[d.hash] = d.objects;
+
+        for (var i = 0; i < d.objects.length; i++) {
+          var o = d.objects[i],
+            element_id = 'fence_' + o.id.replace(':', '_');
+          if (!document.getElementById(element_id)) {
+            fences.appendChild(
+              ce('a-collada-model', {
+                id: element_id,
+                src: 'https://yaglov.ru/cadastre/fence.php?id=' + encodeURIComponent(o.id),
+                'gps-place': 'longitude: ' + o.extent.xmin + '; latitude: ' + o.extent.ymin,
+                'transparent-texture': '',
+              })
+            );
+          }
+        }
+      }
+      window.onload = function () {
+        const camera = document.getElementById('camera');
+
+        camera.addEventListener('componentchanged', function (evt) {
+          switch (evt.detail.name) {
+            case 'rotation':
+              //console.log('camera rotation changed', evt.detail.newData);
+              var compassRotation = camera.components['compass-rotation'],
+                lookControls = camera.components['look-controls'];
+              // camera_angle.innerText = evt.detail.newData.y;
+              if (lookControls) {
+                // yaw_angle.innerText = THREE.Math.radToDeg(lookControls.yawObject.rotation.y);
+              }
+              if (compassRotation) {
+                // compass_heading.innerText = compassRotation.heading;
+              }
+              break;
+            case 'position':
+              //console.log('camera position changed', evt.detail.newData);
+              var gpsPosition = camera.components['gps-position'];
+              // camera_p_x.innerText = evt.detail.newData.x;
+              // camera_p_z.innerText = evt.detail.newData.z;
+              if (gpsPosition) {
+                if (gpsPosition.crd) {
+                  // crd_longitude.innerText = gpsPosition.crd.longitude;
+                  // crd_latitude.innerText = gpsPosition.crd.latitude;
+                  // console.log(evt.detail.newData);
+
+                  var hash = Geohash.encode(gpsPosition.crd.latitude, gpsPosition.crd.longitude, 7);
+                  // geohash_7chars.innerText = hash;
+                  
+
+                  // if (typeof hash_fences[hash] == 'undefined') {
+                  //   hash_fences[hash] = null;
+                  //   document.head.appendChild(
+                  //     ce('script', {
+                  //       src: 'https://yaglov.ru/cadastre/hash.php?hash=' + hash + '&callback=load_hash',
+                  //     })
+                  //   );
+                  // }
+                }
+                if (gpsPosition.zeroCrd) {
+                  // zero_crd_longitude.innerText = gpsPosition.zeroCrd.longitude;
+                  // zero_crd_latitude.innerText = gpsPosition.zeroCrd.latitude;
+                }
+              }
+
+              break;
+          }
+        });
+      };
+    </script>
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <barthauer-root></barthauer-root>
+  </body>
+</html>

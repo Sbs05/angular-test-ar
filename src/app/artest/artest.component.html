@@ -1,0 +1,26 @@
+<p>artest works!</p>
+<div id="message"></div>
+<!-- <div class="divOutside" raycaster="objects: [data-raycastable]">
+    <button class="btn1" (click)="click()">add pipe</button>
+</div> -->
+
+<a-scene
+  cursor="rayOrigin: mouse"
+  scene-foo
+  webxr="requiredFeatures: hit-test,local-floor;
+                optionalFeatures: dom-overlay,unbounded;
+                overlayElement: #overlay;"
+>
+
+  <!-- <a-entity treadmill></a-entity> -->
+  <!-- <a-box material="color: yellow" gps-entity-place="latitude: 35.8354856; longitude: 10.5950266"></a-box> -->
+  <!-- <a-entity testo gps-entity-place="longitude: 10.5950167; latitude: 35.8354858"></a-entity> -->
+  <a-entity testo></a-entity>
+  <!-- <a-box id="ground" class="cantap" scale="1000 2 1000" position="0 -0.99 0" material="opacity: 0.0; transparent: true"> -->
+  <!-- </a-box> -->
+  <!-- <a-box color="yellow" gps-entity-place="latitude: 35.83536188036047; longitude: 10.59502392075956;"></a-box>
+  <a-box color="pink" gps-entity-place="latitude: 35.835265; longitude: 10.594692;"></a-box> -->
+  <!-- <a-camera gps-camera rotation-reader></a-camera> -->
+  <a-camera gps-camera rotation-reader></a-camera>
+
+</a-scene>

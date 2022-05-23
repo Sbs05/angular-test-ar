@@ -1,0 +1,11 @@
+Model Information:
+* title:	Chicago City Electric Cover
+* source:	https://sketchfab.com/3d-models/chicago-city-electric-cover-5910aeb5a9724bacb06a5d590ee1bf69
+* author:	joe_carrot (https://sketchfab.com/joe_carrot)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Chicago City Electric Cover" (https://sketchfab.com/3d-models/chicago-city-electric-cover-5910aeb5a9724bacb06a5d590ee1bf69) by joe_carrot (https://sketchfab.com/joe_carrot) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
